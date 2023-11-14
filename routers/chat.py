@@ -23,7 +23,7 @@ def read_from_embeddings(email: str, query: str) -> str:
     try:
         embeddings = OpenAIEmbeddings()
         vectorstore = Milvus(embeddings, collection_name=email.split('@')[0], connection_args={
-            "host": "20.106.234.205",
+            "host": os.environ.get('VM_HOST'),
             "port": "19530",
 
         })

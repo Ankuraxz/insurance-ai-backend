@@ -70,7 +70,7 @@ async def create_upload_file(email_id: Annotated[Union[str, None], Header()], fi
             embeddings,
             collection_name=email_id.split("@")[0],
             connection_args={
-                "host":"20.106.234.205",
+                "host":os.environ.get('VM_HOST'),
                 "port": "19530",
             },
         )
