@@ -117,7 +117,7 @@ def savechat(email_id: Annotated[Union[str, None], Header()], history: list = Fo
         raise HTTPException(status_code=404, detail=f"Error in writing to mongo db --> {e}")
 
 
-@router.get("/retrivechat", tags=["ai"])
+@router.post("/retrivechat", tags=["ai"])
 def retrivechat(email_id: Annotated[Union[str, None], Header()], document_type: str = Form(...)):
     """
     Read chat from mongo db
