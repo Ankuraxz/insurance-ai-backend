@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'doccheck1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_51737699803C45DFB6A586B8E5993D99 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B431F7D15CC044928FB2D606D03AE27D }}
