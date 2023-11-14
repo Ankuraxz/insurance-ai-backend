@@ -1,0 +1,9 @@
+pymilvus
+langchain
+openai==0.28
+tiktoken
+fastapi
+uvicorn
+pymongo
+pypdf
+python-multipart
