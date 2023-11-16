@@ -3,7 +3,7 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import chat, upload, mongo
+from routers import chat, upload, mongo, repo
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -28,3 +28,4 @@ app.add_middleware(
 app.include_router(chat.router, prefix="/chat")
 app.include_router(upload.router, prefix="/upload")
 app.include_router(mongo.router, prefix="/mongo_db")
+app.include_router(repo.router, prefix="/repository")
